@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inverter Nomes</title>
+</head>
+<body>
+
+<h2>Informe os nomes das 5 pessoas:</h2>
+<form id="formNomes">
+  <label for="nome1">Nome 1:</label>
+  <input type="text" id="nome1" required><br>
+  <label for="nome2">Nome 2:</label>
+  <input type="text" id="nome2" required><br>
+  <label for="nome3">Nome 3:</label>
+  <input type="text" id="nome3" required><br>
+  <label for="nome4">Nome 4:</label>
+  <input type="text" id="nome4" required><br>
+  <label for="nome5">Nome 5:</label>
+  <input type="text" id="nome5" required><br>
+  <button type="button" onclick="inverterNomes()">Inverter</button>
+</form>
+
+<script>
+function inverterNomes() {
+  var nomes = [];
+  nomes.push(document.getElementById("nome1").value);
+  nomes.push(document.getElementById("nome2").value);
+  nomes.push(document.getElementById("nome3").value);
+  nomes.push(document.getElementById("nome4").value);
+  nomes.push(document.getElementById("nome5").value);
+
+  nomes.reverse();
+
+  document.getElementById("nome1").value = nomes[0];
+  document.getElementById("nome2").value = nomes[1];
+  document.getElementById("nome3").value = nomes[2];
+  document.getElementById("nome4").value = nomes[3];
+  document.getElementById("nome5").value = nomes[4];
+}
+</script>
+
+</body>
+</html>

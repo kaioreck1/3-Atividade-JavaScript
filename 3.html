@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alterar Cor de Fundo</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+  }
+  select {
+    padding: 10px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<label for="cores">Escolha uma cor:</label>
+<select id="cores" onchange="changeBackground()">
+  <option value="selecione">Selecione...</option>
+  <option value="red">Vermelho</option>
+  <option value="green">Verde</option>
+  <option value="blue">Azul</option>
+  <option value="yellow">Amarelo</option>
+</select>
+
+<script>
+function changeBackground() {
+  var selectElement = document.getElementById("cores");
+  var selectedColor = selectElement.value;
+  document.body.style.backgroundColor = selectedColor;
+}
+</script>
+
+</body>
+</html>
